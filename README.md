@@ -1,4 +1,4 @@
-#Kanap: Build an E-Commerce Website in Javascript
+# Kanap: Build an E-Commerce Website in Javascript
 
 This is a student project for OpenClassrooms Web Developer Path. The goal is to use vanilla Javascript to build the features expected in an E-Commerce (render products, add to cart, modify and delete quantity, verify contact form with RegEx and purchase).
 
