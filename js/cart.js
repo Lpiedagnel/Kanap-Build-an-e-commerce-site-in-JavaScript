@@ -40,7 +40,6 @@ let emailTest = false
 // Local Storage variables
 let cart = localStorage.getItem("cart")
 cart = JSON.parse(cart)
-console.log(cart)
 
 
 // FUNCTIONS
@@ -197,7 +196,6 @@ function modifyQuantity(element, price) {
             
             cart[i]["quantity"] = newQuantity
             localStorage.setItem("cart", JSON.stringify(cart))
-            console.log(cart)
             return
         }
     }
@@ -232,7 +230,6 @@ function deleteItem(element, price) {
             // Delete from the cart
             cart.splice(i, 1)
             localStorage.setItem("cart", JSON.stringify(cart))
-            console.log(cart)
             return
         }
     }
@@ -367,6 +364,3 @@ function sendConfirmation(json) {
     confirmationUrl.searchParams.append("orderid", orderId)
     location.href = confirmationUrl.href
 }
-
-console.log(window.location.origin)
-console.log(window.location.pathname)

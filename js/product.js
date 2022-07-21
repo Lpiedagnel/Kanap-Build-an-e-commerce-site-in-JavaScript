@@ -71,7 +71,6 @@ function fetchInfo(url, id) {
             }
         })
         .then(function(value) {
-            console.log(value)
             renderInfo(value)
         })
         .catch(function(err) {
@@ -113,7 +112,6 @@ function addToCart () {
             localStorage.setItem("cart", JSON.stringify(cart));
             resetValue() 
             window.alert("Produit(s) ajouté(s) au panier !")
-            console.log(cart)
             return
 
         // If not empty, start comparison
@@ -128,7 +126,6 @@ function addToCart () {
                 cart[i]["quantity"] = quantityStored + quantityValue
                 localStorage.setItem("cart", JSON.stringify(cart))
                 window.alert("Ce produit a déjà été ajouté avec cette couleur. Nous ajoutons la quantité demandée dans le panier !")
-                console.log(cart)
                 resetValue()
                 return
             } 
@@ -138,7 +135,6 @@ function addToCart () {
     cart.push(purchase)
     localStorage.setItem("cart", JSON.stringify(cart));
     window.alert("Produit(s) ajouté(s) au panier !")
-    console.log(cart)
     resetValue() 
     return
     }   
